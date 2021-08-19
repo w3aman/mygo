@@ -1,1 +1,1 @@
-# mygo
+Learning Go
