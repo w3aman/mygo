@@ -25,8 +25,8 @@ sed -i -e 's/containerd.sock/containerd.sock --exec-opt native.cgroupdriver=syst
 systemctl daemon-reload 
 systemctl restart docker
 
-if ["$1" == "master"]; then
-# export MASTER_IP=$2
+if [ "$1" == "master" ]; then
+export MASTER_IP=$2
 kubeadm init --apiserver-advertise-address=$2 --pod-network-cidr=10.244.0.0/16
 
 mkdir -p $HOME/.kube
