@@ -6,6 +6,8 @@ sed -e '/swap/s/^/#/g' -i /etc/fstab
 
 swapoff -a
 
+modprobe dm-snapshot
+
 apt-get update && apt-get -o Dpkg::Options::="--force-confold" upgrade -q -y --force-yes &&
 
 apt-get install nfs-common -y
