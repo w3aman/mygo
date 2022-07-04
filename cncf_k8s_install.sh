@@ -8,7 +8,7 @@ swapoff -a
 
 apt-get update && apt-get -o Dpkg::Options::="--force-confold" upgrade -q -y --force-yes &&
 
-apt-get update nfs-common -y
+apt-get install nfs-common -y
 
 apt-get update && apt-get install -y apt-transport-https curl
 
