@@ -12,6 +12,8 @@ apt-get update && apt-get -o Dpkg::Options::="--force-confold" upgrade -q -y --f
 
 apt-get install nfs-common -y
 
+apt-get install zfsutils-linux -y
+
 apt-get update && apt-get install -y apt-transport-https curl
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
